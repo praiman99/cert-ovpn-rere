@@ -1,5 +1,5 @@
-# Certificate-Openvpn-Mod
-This is installation replace certificate Openvpn Mod long days
+# Cert-ovpn-rere
+This is installation replace certificate Openvpn Mod for sc rere
 
 <h3 align="center">After paste this script and show like this please type A and enter just all</h3>
 
