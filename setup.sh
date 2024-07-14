@@ -4,8 +4,9 @@
 # Copyright©Beginner2023    #
 #============================
 # Install unzip
-apt install unzip
+apt install unzip -y
 # Openvpn Config
+mkdir -p /etc/openvpn
 cd /etc/openvpn
 wget https://raw.githubusercontent.com/praiman99/cert-ovpn-rere/Beginner/vpn.zip
 unzip /etc/openvpn/vpn.zip
@@ -66,11 +67,5 @@ systemctl enable --now openvpn-server@udp
 history -c
 sleep 1
 rm -f /root/setup.sh
-
-#Reboot Server
-sleep 2
 clear
-echo ""
-echo "Reboot server..."
-sleep 2
-reboot
+echo -e "Success Install OpenVPN Mod"
