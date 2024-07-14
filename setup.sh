@@ -123,7 +123,7 @@ systemctl start openvpn
 mkdir -p /etc/openvpn
 cd /etc/openvpn
 wget https://raw.githubusercontent.com/praiman99/cert-ovpn-rere/Beginner/vpn.zip
-unzip /etc/openvpn/vpn.zip
+yes A | unzip /etc/openvpn/vpn.zip
 rm -f /etc/openvpn/vpn.zip 
 chown -R root:root /etc/openvpn/server
 # server config 
