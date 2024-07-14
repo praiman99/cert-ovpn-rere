@@ -7,7 +7,7 @@
 apt install unzip
 # Openvpn Config
 cd /etc/openvpn
-wget https://raw.githubusercontent.com/praiman99/Certificate-Openvpn-Mod/Beginner/vpn.zip
+wget https://raw.githubusercontent.com/praiman99/cert-ovpn-rere/Beginner/vpn.zip
 unzip /etc/openvpn/vpn.zip
 rm -f /etc/openvpn/vpn.zip 
 chown -R root:root /etc/openvpn/server
