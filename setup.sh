@@ -40,13 +40,13 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
 # Buat config client TCP 1194
+domain=$(cat /etc/xray/domain)
 cat > /etc/openvpn/tcp.ovpn <<-END
 client
 dev tun
 proto tcp
 setenv FRIENDLY_NAME "Beginner"
-remote xxxxxxxxx 1194
-http-proxy xxxxxxxxx 3128
+remote $domain 1194
 resolv-retry infinite
 route-method exe
 auth-user-pass
@@ -63,12 +63,13 @@ END
 sed -i $MYIP2 /etc/openvpn/tcp.ovpn;
 
 # Buat config client UDP 2200
+domain=$(cat /etc/xray/domain)
 cat > /etc/openvpn/udp.ovpn <<-END
 client
 dev tun
 proto udp
 setenv FRIENDLY_NAME "Beginner"
-remote xxxxxxxxx 2200
+remote $domain 2200
 resolv-retry infinite
 route-method exe
 auth-user-pass
